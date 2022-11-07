@@ -30,10 +30,8 @@ export function metrics(app: Express): RequestHandler {
     next();
 
     res.on("finish", () => {
-      console.log("DEBUG: ", res.statusCode);
-
       counter.inc({
-        path: route.path,
+        path: route ? route.path : "undefined",
         method: req.method,
         status_code: res.statusCode,
       });

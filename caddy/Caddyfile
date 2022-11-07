@@ -1,0 +1,12 @@
+{
+	debug
+	admin 0.0.0.0:2019
+
+	servers :8080 {
+		metrics
+	}
+}
+
+:8080 {
+	reverse_proxy * server:3000
+}
