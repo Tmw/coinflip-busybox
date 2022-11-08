@@ -22,26 +22,13 @@ Observe the Grafana dashboard at http://localhost:9091
 
 ## Grafana Dashboards
 
-These are the dashboards used if you want to import them.
+The project contains three dashboards:
 
-<table>
-<tr>
-<th>Dashboard</th>
-<th>File/ID</th>
-</tr>
-<tr>
-<td>Coin-flip</td>
-<td>./dashboard-model.json</td>
-</tr>
-<tr>
-<td>NodeJS</td>
-<td>grafana: 11159</td>
-</tr>
-<tr>
-<td>Caddy Exporter</td>
-<td>grafana: 14280</td>
-</tr>
-</table>
+- NodeJS (Community ID: 11159)
+- Caddy Exporter (Community ID: 14280)
+- Coin Flip (custom)
+
+All of these are managed through Grafana's provisioning feature. Their declaration files are located in `grafana/dashboards` which is mounted as a volume in the Grafana container.
 
 ## License
 

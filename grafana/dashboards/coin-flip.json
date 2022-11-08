@@ -29,10 +29,7 @@
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "8RdZKMv4z"
-      },
+      "datasource": "prometheus",
       "description": "Heads or tails over time + totals",
       "fieldConfig": {
         "defaults": {
@@ -123,10 +120,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "8RdZKMv4z"
-          },
+          "datasource": "prometheus",
           "editorMode": "code",
           "expr": "rate(coin_flip_totals[$__rate_interval]) * 60",
           "legendFormat": "{{side}}",
@@ -134,10 +128,7 @@
           "refId": "Head vs Tail"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "8RdZKMv4z"
-          },
+          "datasource": "prometheus",
           "editorMode": "code",
           "expr": "sum without(side) (rate(coin_flip_totals[$__rate_interval]) * 60)",
           "hide": false,
@@ -150,10 +141,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "8RdZKMv4z"
-      },
+      "datasource": "prometheus",
       "description": "Heads or tails over time + totals",
       "fieldConfig": {
         "defaults": {
@@ -236,10 +224,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "8RdZKMv4z"
-          },
+          "datasource": "prometheus",
           "editorMode": "code",
           "exemplar": false,
           "expr": "coin_flip_totals",
@@ -253,10 +238,7 @@
       "type": "piechart"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "8RdZKMv4z"
-      },
+      "datasource": "prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -347,10 +329,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "8RdZKMv4z"
-          },
+          "datasource": "prometheus",
           "editorMode": "code",
           "exemplar": false,
           "expr": "sum by(status_code) (rate(http_requests{status_code=\"200\"}[$__rate_interval])) * 60",
@@ -360,10 +339,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "8RdZKMv4z"
-          },
+          "datasource": "prometheus",
           "editorMode": "code",
           "expr": "sum by(status_code) (rate(http_requests{status_code!=\"200\"}[$__rate_interval])) * 60",
           "hide": false,
